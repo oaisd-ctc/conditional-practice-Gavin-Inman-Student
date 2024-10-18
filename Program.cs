@@ -12,13 +12,23 @@ public class Program
         CheckForPositiveNegativeZero(-1); // This should output: "Your number is negative"
         CheckForPositiveNegativeZero(0); // This should output: "Your number is zero"
         CheckForPositiveNegativeZero(1); // This should output: "Your number is positive"
-        FindMinimum(12, 44, 6);
-        FindMaximum(1002, 44, 1999);
-        IsDivisibleBy5(-32);
-        CheckEvenOrOdd(56);
+        FindMinimum(1, 2, 3);
+        FindMinimum(2, 1, 3);
+        FindMinimum(3, 2, 1);
+        FindMaximum(1, 2, 3);
+        FindMaximum(2, 1, 3);
+        FindMaximum(3, 2, 1);
+        IsDivisibleBy5(5);
+        IsDivisibleBy5(6);
+        CheckEvenOrOdd(2);
+        CheckEvenOrOdd(3);
         CheckVowelOrConsonant('e');
-        // ...
-        // DisplayDayOfWeek(0); // This should output: "Thursday"
+        CheckVowelOrConsonant('E');
+        CheckVowelOrConsonant('s');
+        CheckVowelOrConsonant('S');
+        DisplayDayOfWeek(0);
+        DisplayDayOfWeek(3);
+        DisplayDayOfWeek(6);
 
     }
 
@@ -97,14 +107,41 @@ public class Program
             }
     }
     public static void CheckVowelOrConsonant(char letter)
-    {   
-        if (letter == vowel)
+    {
+        if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u' || letter == 'A' || letter == 'E' || letter == 'I' || letter == 'O' || letter == 'U')
         {
             Console.WriteLine($"{letter} is a vowel");
         }else
             {
                 Console.WriteLine($"{letter} is a consonant");
             }
+    }
+    public static void DisplayDayOfWeek(int dayCode)
+    {
+        switch(dayCode)
+        {
+            case 0:
+            Console.WriteLine("Sunday");
+            break;
+            case 1:
+	        Console.WriteLine("Monday");
+            break;
+            case 2:
+	        Console.WriteLine("Tuesday");
+            break;
+            case 3:
+	        Console.WriteLine("Wednesday");
+            break;
+            case 4:
+	        Console.WriteLine("Thursday");
+            break;
+            case 5:
+	        Console.WriteLine("Friday");
+            break;
+            case 6:
+	        Console.WriteLine("Saturday");
+            break;
+        }
     }
 }
 
